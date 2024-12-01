@@ -1,3 +1,5 @@
+Real data is NOT shared following data sharing policy. Reach out to dasp4@vcu.edu or pdasvcu@gmail.com to learn more.
+
 - Covariates: c(Intercept, "age_at_diag", "disease_duration", "gender","white", "black")
 - Treatments: 
 # 1 = 121191 = B-cell depletion (rituximab + ocrelizumab)
