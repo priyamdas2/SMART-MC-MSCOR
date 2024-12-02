@@ -7,16 +7,15 @@ ActivateMSCORParallel = 0; % 1 = parallel, else, NOT parallel
 starting_point_temp = nan(B,n);
 x0 = nan(B,n);
 for b = 1:B
-    starting_point_temp(b,:) = -1 + 2*rand(1,n);
+    starting_point_temp(b,:) = rand(1,n);
     x0(b,:) = starting_point_temp(b,:)/norm(starting_point_temp(b,:));
 end
 %% Modified Ackley's function
 
 fun = @(X) Ackley_Sum(X);
-fun_asVec = @(X_vec)Ackley_Sum_asVec(X_vec,n);
 soln_each = (1/sqrt(n))*ones(n,1);
 temp = soln_each';
-soln = repmat(temp,B,1);
+soln = repmat(temp,B,1); % true global minima
 
 %% MSCOR
 if(ActivateMSCORParallel == 1)
