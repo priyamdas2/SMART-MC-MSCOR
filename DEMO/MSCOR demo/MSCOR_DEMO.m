@@ -7,7 +7,7 @@ ActivateMSCORParallel = 0; % 1 = parallel, else, NOT parallel
 starting_point_temp = nan(B,n);
 x0 = nan(B,n);
 for b = 1:B
-    starting_point_temp(b,:) = rand(1,n);
+    starting_point_temp(b,:) = -1+2*rand(1,n);
     x0(b,:) = starting_point_temp(b,:)/norm(starting_point_temp(b,:));
 end
 %% Modified Ackley's function
