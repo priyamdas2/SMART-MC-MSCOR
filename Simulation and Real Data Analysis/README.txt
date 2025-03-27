@@ -1,0 +1,1 @@
+1) Run 'SMART_MC.m'. Note that, all plots, summaries, including Bootstrap is performed within it.
