@@ -11,7 +11,7 @@ lambda = 10^(-6);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%% Data generation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-DoBootstrapNow = 0; % 1 = Bootstrap is performed now; 0 = Bootstrap s.e. are loaded from saved results
+DoBootstrapNow = 1; % 1 = Bootstrap is performed now; 0 = Bootstrap s.e. are loaded from saved results
 RandSeed = 2; % Don't change, 'NonNullPositions' depends on it. And hence calculated bootstrap s.e.
 NumSubjects = 1000;
 NumContVars = 5;
@@ -20,7 +20,7 @@ InterceptIndic = 1;
 mu = 0;            % Used in Beta generation
 sigma = 10;        % Used in Beta generation
 BernProb = 0.5;    % Used if dist = 1, and, NumIndicVars > 0
-dist = 2;          % X generated from: 1 = uniform(0,1), 2 = Normal(0,1)
+dist = 2;          % X generated from: 1 = uniform(-10,10), 2 = Normal(0,1)
 TrtSeqLengthEach = 20;
 p = NumContVars+NumIndicVars;
 N = 10;             % use >= 5 
@@ -32,6 +32,8 @@ X = Simulation_generate_X(RandSeed,NumSubjects,NumContVars,NumIndicVars,...
     BernProb,InterceptIndic,dist);
 
 BetaCellTrue = BetaCellRandGenerator(RandSeed, N, p, mu, sigma);
+save('BetaCellTrue.mat', 'BetaCellTrue')
+
 SubjectTransMats = SubjectSpecificTransMat(X,BetaCellTrue,NonNullPositionsTrue);
 TrtSeqMat = Simulation_generate_TrtSeqMat(RandSeed,SubjectTransMats,...
     TrtSeqLengthEach);
@@ -42,7 +44,7 @@ writematrix(TrtSeqMat, 'Dummy_sequences.csv');
 %%% Finding Bootstrap Standard errors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-NumBootRep = 1000; % Dont change; saved result is available only for value 1000
+NumBootRep = 100; % Dont change; saved result is available only for value 100
 
 if(DoBootstrapNow == 1)
     BetaALLBootStdErr = BetaALL_BootStdErr(NumBootRep, X, TrtSeqMat, N);
@@ -53,7 +55,6 @@ else
     TempMat = load(filename);
     BetaALLBootStdErr = TempMat.BetaALLBootStdErr;
 end
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,6 +117,13 @@ writematrix(round(CoeffsEst,2), filename);
 
 filename = 'Output_Simulation_CoeffsTrue.csv';
 writematrix(round(CoeffsTrue,2), filename);
+
+% CoeffsEst = readmatrix('Output_Simulation_CoeffsEst.csv')
+% CoeffsTrue = readmatrix('Output_Simulation_CoeffsTrue.csv')
+% CoeffsDiffMAD = mean(abs(CoeffsEst(:,5:10) - CoeffsTrue(:,5:10)), 2);
+% filename = 'Output_Simulation_CoeffsTrueEstMAD.csv';
+% writematrix(round(CoeffsDiffMAD,2), filename);
+
 
 TopTransitions = CoeffsEst(:,1:2);
 Se = zeros(TopHowManyInitials+TopHowManyTrans, NumContVars + 1);

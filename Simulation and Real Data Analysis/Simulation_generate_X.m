@@ -8,7 +8,7 @@ if(InterceptIndic == 0)
 end
 
 if(dist == 1)
-    X(:,2:(NumContVars+1)) = rand(NumSubjects,NumContVars);
+    X(:,2:(NumContVars+1)) = 20*rand(NumSubjects,NumContVars) - 10;
 else
     if(dist == 2)
         X(:,2:(NumContVars+1)) = normrnd(0,1,NumSubjects,NumContVars);
