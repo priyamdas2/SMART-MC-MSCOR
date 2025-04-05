@@ -1,7 +1,7 @@
 values = [7,2,3,6]; % 2 = Griewank, 3 = Negative Sum Squares, 6 = Rastrigin, 7 = Ackley.
-B = 5;
+B = 100;
 M = 5;
-NumExp = 100;
+NumExp = 10;
 
 which_function = values(1);
 for funIdx = 1:4
@@ -12,10 +12,12 @@ for funIdx = 1:4
     Times = readmatrix(filename2);
     if(funIdx == 1)
         Table = [min(abs(FunVals))', (std(abs(FunVals))/sqrt(length(FunVals)))',...
-            round(mean(Times)',2), round((std(abs(Times))/sqrt(length(Times)))',3)];
+            round(mean(Times)',2), round((std(abs(Times))/sqrt(length(Times)))',3), ...
+            round(median(Times)',2), round(max(Times)',2)];
     else
         Table = [Table; [min(abs(FunVals))', (std(abs(FunVals))/sqrt(length(FunVals)))',...
-            round(mean(Times)',2), round((std(abs(Times))/sqrt(length(Times)))',3)]];
+            round(mean(Times)',2), round((std(abs(Times))/sqrt(length(Times)))',3), ...
+            round(median(Times)',2), round(max(Times)',2)]];
     end
 end
 
