@@ -21,14 +21,17 @@ The manuscript introduces:
 
 ## 🧮 Figures and Tables in the Paper
 
+To reproduce the tables and figures presented in the paper, please refer to `SMART_MC_Reproducibility_and_DEMO_instructions.pdf`. A brief overview is provided below.
+
+
 | Output        | Description                                | Script Path                            |
 |---------------|--------------------------------------------|----------------------------------------|
 | **Figure 1**  | Sankey diagrams of treatment sequences     | `Real Data Analysis/exploratory_analysis.R` |
-| **Figures 5–6a** | Estimated transition probabilities (SMART-MC) | `Real Data Analysis/SMART_MC_Var_effect_plot.R` |
+| **Figures 5,6a** | Estimated transition probabilities (SMART-MC) | `Real Data Analysis/SMART_MC_Var_effect_plot.R` |
 | **Figure 6b** | Odds ratios for across-treatment transitions | `SMART_MC_ODDS_ratio_calculation.m` → `SMART_MC_Odds_ratio_plot.R` |
-| **Table 1**   | MSCOR benchmark results                    | `MSCOR Benchmark/MSCOR_Benchmark_comparison.m` → `MSCOR_post_evaluation.m` |
+| **Table 1, S1**, **Figure S1**   | MSCOR benchmark results                    | `MSCOR Benchmark/MSCOR_Benchmark_comparison.m` → `MSCOR_post_evaluation.m` |
 | **Tables S2–S5** | Simulation results                       | `Simulation Study/` (see details in `SMART_MC_Reproducibility_and_DEMO_instructions.pdf`)        |
-| **Table S6**, **Figure S2** | SMART-MC estimated coefficients | `Real Data Analysis/SMART_MC_Real_data.m` |
+| **Table S6**, **Figure S2** | SMART-MC estimated coefficients; simulated treatment trajectory | `Real Data Analysis/SMART_MC_Real_data.m` |
 
 ---
 
