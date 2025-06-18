@@ -52,12 +52,12 @@ For the case study involving 7 treatments, approximately 9,468 treatment records
 All major figures and visual outputs from the manuscript are available under the `images/` directory. Representative visuals include:
 
 ### SMART-MC Conceptual Framework
-![SMART-MC framework](images/SMARTMC_Concept_v3.png)
+![SMART-MC framework](images/SMARTMC_Concept_v3.jpg)
 
 This schematic illustrates how individual patient trajectories, clinical covariates, and transition histories are integrated into the SMART-MC model via covariate-linked transition matrices.
 
 ### MSCOR Algorithm Flowchart
-![MSCOR flowchart](images/MSCOR_concept_v4.png)
+![MSCOR flowchart](images/MSCOR_concept_v4.jpg)
 
 The MSCOR routine implements parallelized global search with run-specific adaptive step sizes, enabling robust optimization over non-convex surfaces constrained to spheres.
 
