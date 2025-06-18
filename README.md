@@ -1,19 +1,21 @@
 # SMART-MC and MSCOR: Reproducibility Repository
 
 **Paper Title:**  
-SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model
+SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model 
 
-This repository provides the necessary code and documentation for reproducing the results in the article listed above. It implements the SMART-MC model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces MSCOR, a novel global optimization routine (over multiple spherically constrained parameter space) used in this context.
+This repository provides the necessary code and documentation for reproducing the results presented in the article above. It implements the **SMART-MC** model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces **MSCOR**, a novel global optimization routine designed for optimization over multiple spherically constrained parameter spaces.
 
 ---
 
 ## 📄 Paper Description
 
 The manuscript introduces:
-- **SMART-MC**, a penalized covariate-driven Markov model to estimate dynamic treatment transitions in MS
-- **MSCOR**, a spherically constrained optimization routine for high-dimensional non-convex estimation
-- Applications to real-world EHR data and extensive simulation studies
-- Figures, tables, and diagnostics for estimation performance and phenotypic treatment heterogeneity
+
+- **SMART-MC**, a covariate-driven Markov model for estimating dynamic treatment transition probabilities in MS as a function of patient covariates.
+- **MSCOR**, a spherically constrained optimization routine for globally optimizing black-box functions over parameter spaces constrained to collections of unit spheres.
+- A benchmark study demonstrating the superiority of **MSCOR** over existing global optimization techniques such as Genetic Algorithms and Simulated Annealing.
+- A comprehensive simulation study of **SMART-MC**, powered by **MSCOR**, evaluating estimation performance under various scenarios.
+- An application of **SMART-MC** to real-world data to identify the influence of key clinical and demographic factors on both within- and across-treatment transition probabilities for MS-DMTs.
 
 ---
 
@@ -37,8 +39,3 @@ The manuscript introduces:
 - **Required R packages**:
   - `ggplot2`, `dplyr`, `tidyr`, `readr`, `patchwork`, `RColorBrewer`, `ggalluvial`, `reshape2`, `purrr`
 
-To install all required R packages:
-
-```r
-install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "RColorBrewer", 
-                   "patchwork", "ggalluvial", "reshape2", "purrr"))
