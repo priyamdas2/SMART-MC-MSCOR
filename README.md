@@ -7,7 +7,7 @@ This repository provides the necessary code and documentation for reproducing th
 
 ---
 
-## 📄 Paper Description
+## 📄 Paper Summary
 
 The manuscript introduces:
 
