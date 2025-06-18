@@ -1,46 +1,44 @@
-# SMART-MC and MSCOR: Modeling Multiple Sclerosis Therapy Transitions
+# SMART-MC and MSCOR: Reproducibility Repository
 
 **Paper Title:**  
 SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markovian Framework
 
-## Overview
-
-This repository contains all code and data needed to reproduce the key results and figures from the manuscript accepted for publication in the *Journal of the American Statistical Association (JASA)*. The paper develops SMART-MC, a covariate-based Markov model for estimating treatment transition probabilities in Multiple Sclerosis (MS), and proposes MSCOR, a novel global optimization routine tailored for sparse, non-convex estimation.
-
-The analysis includes both simulated data and real-world DMT (Disease Modifying Therapy) sequences from the CLIMB cohort and other sources within the Mass General Brigham health system.
+This repository provides the necessary code and documentation for reproducing the results in the JASA article listed above. It implements the SMART-MC model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces MSCOR, a novel global optimization routine used in this context.
 
 ---
 
-## Figures and Scripts
+## 📄 Paper Description
 
-| Figure / Table | Description | Script |
-|----------------|-------------|--------|
-| Figure 1       | Sankey diagrams of treatment sequences | `R/Empirical_Sankey_Plot.R` |
-| Figure 2       | Heatmaps of empirical transition probabilities | `R/Empirical_Heatmap.R` |
-| Figure 3       | SMART-MC estimated transition curves by covariates | `R/SMART_MC_TransitionCurves.R` |
-| Figure 4       | Initial treatment probabilities and odds ratios | `R/SMART_MC_Initial_OR.R` |
-| Table S6       | Estimated coefficients from SMART-MC | `R/Estimate_SMART_MC_Coefficients.R` |
-| Simulation Results | Simulation setup and performance evaluation | `Simulations/Run_Simulation_Results.R` |
-
-Each script is documented with in-line comments explaining its functionality. Scripts automatically save figures to the `Plots/` folder.
+The manuscript introduces:
+- **SMART-MC**, a penalized covariate-driven Markov model to estimate dynamic treatment transitions in MS
+- **MSCOR**, a spherically constrained optimization routine for high-dimensional non-convex estimation
+- Applications to real-world EHR data and extensive simulation studies
+- Figures, tables, and diagnostics for estimation performance and phenotypic treatment heterogeneity
 
 ---
 
-## Requirements
+## 🧮 Figures and Tables in the Paper
+
+| Output        | Description                                | Script Path                            |
+|---------------|--------------------------------------------|----------------------------------------|
+| **Figure 1**  | Sankey diagrams of treatment sequences     | `Real Data Analysis/exploratory_analysis.R` |
+| **Figures 5–6a** | Estimated transition probabilities (SMART-MC) | `Real Data Analysis/SMART_MC_Var_effect_plot.R` |
+| **Figure 6b** | Odds ratios for across-treatment transitions | `SMART_MC_ODDS_ratio_calculation.m` → `SMART_MC_Odds_ratio_plot.R` |
+| **Table 1**   | MSCOR benchmark results                    | `MSCOR Benchmark/MSCOR_Benchmark_comparison.m` → `MSCOR_post_evaluation.m` |
+| **Tables S2–S5** | Simulation results                       | `Simulation Study/` (see below)        |
+| **Table S6**, **Figure S2** | SMART-MC estimated coefficients | `Real Data Analysis/SMART_MC_Real_data.m` |
+
+---
+
+## 📦 Requirements
 
 - **R version**: 4.3.1  
-- **R packages**:
-  - `ggplot2 (>= 3.4.2)`
-  - `dplyr (>= 1.1.2)`
-  - `tidyr (>= 1.3.0)`
-  - `readr (>= 2.1.4)`
-  - `RColorBrewer (>= 1.1-3)`
-  - `patchwork (>= 1.1.2)`
-  - `ggalluvial (>= 0.12.5)`
-  - `reshape2 (>= 1.4.4)`
-  - `purrr (>= 1.0.1)`
+- **MATLAB**: R2022a or later  
+- **Required R packages**:
+  - `ggplot2`, `dplyr`, `tidyr`, `readr`, `patchwork`, `RColorBrewer`, `ggalluvial`, `reshape2`, `purrr`
 
-You can install all required packages via:
+To install all required R packages:
 
-```R
-install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "RColorBrewer", "patchwork", "ggalluvial", "reshape2", "purrr"))
+```r
+install.packages(c("ggplot2", "dplyr", "tidyr", "readr", "RColorBrewer", 
+                   "patchwork", "ggalluvial", "reshape2", "purrr"))
