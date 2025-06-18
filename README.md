@@ -45,4 +45,60 @@ To reproduce the tables and figures presented in the paper, please refer to `SMA
 
 For the case study involving 7 treatments, approximately 9,468 treatment records across 822 subjects, and \( p = 5 \) covariates, the SMART-MC estimation takes roughly **7–10 minutes** to complete. This benchmark was obtained on a **Windows 10 Enterprise** system with **32 GB RAM** and a **12th Gen Intel(R) Core(TM) i7-12700** processor (12 cores, 20 logical threads, 2.10 GHz base frequency).
 
+---
+
+## 📊 Key Visual Summaries
+
+All major figures and visual outputs from the manuscript are available under the `Main_Plots/` directory. Representative visuals include:
+
+### SMART-MC Conceptual Framework
+![SMART-MC framework](Main_Plots/SMARTMC_Concept_v3.png)
+
+This schematic illustrates how individual patient trajectories, clinical covariates, and transition histories are integrated into the SMART-MC model via covariate-linked transition matrices.
+
+### MSCOR Algorithm Flowchart
+![MSCOR flowchart](Main_Plots/MSCOR_concept_v4.png)
+
+The MSCOR routine implements parallelized global search with run-specific adaptive step sizes, enabling robust optimization over non-convex surfaces constrained to spheres.
+
+### Empirical Treatment Summaries
+![Empirical summaries](Main_Plots/Treatment_alluvial_heatmap_combined.jpg)
+
+(a) Stacked bar plots showing visit-wise DMT frequencies. (b) Heatmap showing empirical transition counts between treatments.
+
+### Initial Treatment and Odds Ratios
+![Initial & OR](Main_Plots/SMART_MC_initial_and_OR.jpg)
+
+(a) Heatmap of estimated initial DMT probabilities across subgroups. (b) Odds ratios of switching versus remaining on the same treatment, stratified by disease duration.
+
+### Covariate Effects on Transition Probabilities
+![Transition Curves](Main_Plots/SMART_MC_Transitions.jpg)
+
+Transition probabilities for common DMT changes as functions of age and disease duration, stratified by sex and race.
+
+---
+
+## 📁 Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| `Real Data Analysis/` | Real data analysis scripts (Figures 1, 5, 6; Table S6) |
+| `Simulation Study/` | Simulation experiments evaluating SMART-MC performance |
+| `MSCOR Benchmark/` | MSCOR comparison with other optimizers (Table 1, Fig S1) |
+| `Main_Plots/` | Final versions of all figures used in the manuscript |
+| `SMART_MC_Reproducibility_and_DEMO_instructions.pdf` | Full reproduction instructions |
+
+---
+
+## 🔐 Data Access
+
+The MS treatment data used in this study originate from the Mass General Brigham EHR system, including the CLIMB cohort. Due to privacy constraints, raw data cannot be released. However, example and synthetic datasets are included for demo and verification. See the manuscript for details on data structure and variables.
+
+---
+
+## 💬 Contact
+
+For questions, please contact:  
+**Priyam Das**  
+[dasp4@vcu.edu](mailto:dasp4@vcu.edu)
 
