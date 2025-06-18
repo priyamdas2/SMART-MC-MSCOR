@@ -49,30 +49,30 @@ For the case study involving 7 treatments, approximately 9,468 treatment records
 
 ## 📊 Key Visual Summaries
 
-All major figures and visual outputs from the manuscript are available under the `Main_Plots/` directory. Representative visuals include:
+All major figures and visual outputs from the manuscript are available under the `Main Plots/` directory. Representative visuals include:
 
 ### SMART-MC Conceptual Framework
-![SMART-MC framework](Main_Plots/SMARTMC_Concept_v3.png)
+![SMART-MC framework](Main Plots/SMARTMC_Concept_v3.png)
 
 This schematic illustrates how individual patient trajectories, clinical covariates, and transition histories are integrated into the SMART-MC model via covariate-linked transition matrices.
 
 ### MSCOR Algorithm Flowchart
-![MSCOR flowchart](Main_Plots/MSCOR_concept_v4.png)
+![MSCOR flowchart](Main Plots/MSCOR_concept_v4.png)
 
 The MSCOR routine implements parallelized global search with run-specific adaptive step sizes, enabling robust optimization over non-convex surfaces constrained to spheres.
 
 ### Empirical Treatment Summaries
-![Empirical summaries](Main_Plots/Treatment_alluvial_heatmap_combined.jpg)
+![Empirical summaries](Main Plots/Treatment_alluvial_heatmap_combined.jpg)
 
 (a) Stacked bar plots showing visit-wise DMT frequencies. (b) Heatmap showing empirical transition counts between treatments.
 
 ### Initial Treatment and Odds Ratios
-![Initial & OR](Main_Plots/SMART_MC_initial_and_OR.jpg)
+![Initial & OR](Main Plots/SMART_MC_initial_and_OR.jpg)
 
 (a) Heatmap of estimated initial DMT probabilities across subgroups. (b) Odds ratios of switching versus remaining on the same treatment, stratified by disease duration.
 
 ### Covariate Effects on Transition Probabilities
-![Transition Curves](Main_Plots/SMART_MC_Transitions.jpg)
+![Transition Curves](Main Plots/SMART_MC_Transitions.jpg)
 
 Transition probabilities for common DMT changes as functions of age and disease duration, stratified by sex and race.
 
