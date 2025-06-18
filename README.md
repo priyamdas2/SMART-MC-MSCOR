@@ -18,6 +18,18 @@ The manuscript introduces:
 
 ---
 
+## 📁 Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| `Real Data Analysis/` | Real data analysis scripts (Figures 1, 5, 6; Table S6) |
+| `Simulation Study/` | Simulation experiments evaluating SMART-MC performance |
+| `MSCOR Benchmark/` | MSCOR comparison with other optimizers (Table 1, Fig S1) |
+| `images/` | Final versions of all figures used in the manuscript |
+| `SMART_MC_Reproducibility_and_DEMO_instructions.pdf` | Full reproduction instructions |
+
+---
+
 ## 🧮 Figures and Tables in the Paper
 
 To reproduce the tables and figures presented in the paper, please refer to `SMART_MC_Reproducibility_and_DEMO_instructions.pdf`. A brief overview is provided below.
@@ -75,18 +87,6 @@ The MSCOR routine implements parallelized global search with run-specific adapti
 ![Transition Curves](images/SMART_MC_Transitions.jpg)
 
 Transition probabilities for common DMT changes as functions of age and disease duration, stratified by sex and race.
-
----
-
-## 📁 Repository Structure
-
-| Folder | Description |
-|--------|-------------|
-| `Real Data Analysis/` | Real data analysis scripts (Figures 1, 5, 6; Table S6) |
-| `Simulation Study/` | Simulation experiments evaluating SMART-MC performance |
-| `MSCOR Benchmark/` | MSCOR comparison with other optimizers (Table 1, Fig S1) |
-| `Main_Plots/` | Final versions of all figures used in the manuscript |
-| `SMART_MC_Reproducibility_and_DEMO_instructions.pdf` | Full reproduction instructions |
 
 ---
 
