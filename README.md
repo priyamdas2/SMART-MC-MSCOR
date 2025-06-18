@@ -1,7 +1,6 @@
 # SMART-MC and MSCOR: Reproducibility Repository
 
-**Paper Title:**  
-SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model 
+**Paper Title:**  SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model 
 
 This repository provides the necessary code and documentation for reproducing the results presented in the article above. It implements the **SMART-MC** model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces **MSCOR**, a novel global optimization routine designed for optimization over multiple spherically constrained parameter spaces.
 
@@ -41,4 +40,10 @@ To reproduce the tables and figures presented in the paper, please refer to `SMA
 - **MATLAB**: R2022a or later  
 - **Required R packages**:
   - `ggplot2`, `dplyr`, `tidyr`, `readr`, `patchwork`, `RColorBrewer`, `ggalluvial`, `reshape2`, `purrr`
+ 
+### 🕒 Approximate Computation Time
+
+For the case study involving 7 treatments, approximately 9,468 treatment records across 822 subjects, and \( p = 5 \) covariates, the SMART-MC estimation takes roughly **7–10 minutes** to complete.  
+This benchmark was obtained on a **Windows 10 Enterprise** system with **32 GB RAM** and a **12th Gen Intel(R) Core(TM) i7-12700** processor (12 cores, 20 logical threads, 2.10 GHz base frequency).
+
 
