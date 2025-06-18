@@ -25,7 +25,7 @@ The manuscript introduces:
 | **Figures 5–6a** | Estimated transition probabilities (SMART-MC) | `Real Data Analysis/SMART_MC_Var_effect_plot.R` |
 | **Figure 6b** | Odds ratios for across-treatment transitions | `SMART_MC_ODDS_ratio_calculation.m` → `SMART_MC_Odds_ratio_plot.R` |
 | **Table 1**   | MSCOR benchmark results                    | `MSCOR Benchmark/MSCOR_Benchmark_comparison.m` → `MSCOR_post_evaluation.m` |
-| **Tables S2–S5** | Simulation results                       | `Simulation Study/` (see below)        |
+| **Tables S2–S5** | Simulation results                       | `Simulation Study/` (see details in `SMART_MC_Reproducibility_and_DEMO_instructions.pdf`)        |
 | **Table S6**, **Figure S2** | SMART-MC estimated coefficients | `Real Data Analysis/SMART_MC_Real_data.m` |
 
 ---
