@@ -14,7 +14,7 @@ The manuscript introduces:
 - **MSCOR**, a spherically constrained optimization routine for globally optimizing black-box functions over parameter spaces constrained to collections of unit spheres.
 - A benchmark study demonstrating the superiority of **MSCOR** over existing global optimization techniques such as Genetic Algorithms and Simulated Annealing.
 - A comprehensive simulation study of **SMART-MC**, powered by **MSCOR**, evaluating estimation performance under various scenarios.
-- An application of **SMART-MC** to real-world data to identify the influence of key clinical and demographic factors on both within- and across-treatment transition probabilities for MS-DMTs.
+- **SMART-MC** is used to identify the influence of key clinical and demographic factors on both within- and across-treatment transition probabilities for MS-DMTs.
 
 ---
 
