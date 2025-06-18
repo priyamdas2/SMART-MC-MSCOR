@@ -43,7 +43,6 @@ To reproduce the tables and figures presented in the paper, please refer to `SMA
  
 ### 🕒 Approximate Computation Time
 
-For the case study involving 7 treatments, approximately 9,468 treatment records across 822 subjects, and \( p = 5 \) covariates, the SMART-MC estimation takes roughly **7–10 minutes** to complete.  
-This benchmark was obtained on a **Windows 10 Enterprise** system with **32 GB RAM** and a **12th Gen Intel(R) Core(TM) i7-12700** processor (12 cores, 20 logical threads, 2.10 GHz base frequency).
+For the case study involving 7 treatments, approximately 9,468 treatment records across 822 subjects, and \( p = 5 \) covariates, the SMART-MC estimation takes roughly **7–10 minutes** to complete. This benchmark was obtained on a **Windows 10 Enterprise** system with **32 GB RAM** and a **12th Gen Intel(R) Core(TM) i7-12700** processor (12 cores, 20 logical threads, 2.10 GHz base frequency).
 
 
