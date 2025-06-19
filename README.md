@@ -1,4 +1,4 @@
-# SMART-MC and MSCOR: Reproducibility Repository
+# SMART-MC and MSCOR
 
 **Paper Title:**  SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model 
 
