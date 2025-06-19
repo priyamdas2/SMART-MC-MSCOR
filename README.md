@@ -18,7 +18,7 @@ The manuscript introduces:
 
 ---
 
-## 📁 Repository Structure
+## 📁 File Overview
 
 | Folder | Description |
 |--------|-------------|
