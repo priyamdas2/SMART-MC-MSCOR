@@ -71,7 +71,7 @@ for i = 1:(N+1)
             Vec_nonNaN = Vec(nonNaN_idx);
             Vec_NZ = Vec_nonNaN(Vec_nonNaN ~=0);
             if(NonNullPositions(i,j) == 1)
-                BetaALLBootStdErr(i,j,d) = std(Vec_NZ)/sqrt(length(Vec_NZ));
+                BetaALLBootStdErr(i,j,d) = std(Vec_NZ);
             end
         end
     end
