@@ -2,6 +2,9 @@
 
 **Paper Title:**  SMART-MC: Characterizing the Dynamics of Multiple Sclerosis Therapy Transitions Using a Covariate-Based Markov Model 
 
+This repository provides the necessary code and documentation for reproducing the results presented in the article above. It implements the **SMART-MC** model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces **MSCOR**, a novel global optimization routine designed for optimization over multiple spherically constrained parameter spaces.
+
+
 ## 📚 Citation
 
 > Kim, B., Xia, Z., & Das, P. (2025).  
@@ -10,7 +13,7 @@
 > [https://doi.org/10.1080/01621459.2025.2555055](https://doi.org/10.1080/01621459.2025.2555055)
 
 
-This repository provides the necessary code and documentation for reproducing the results presented in the article above. It implements the **SMART-MC** model for estimating covariate-driven treatment transitions in Multiple Sclerosis, and introduces **MSCOR**, a novel global optimization routine designed for optimization over multiple spherically constrained parameter spaces.
+
 
 ---
 
